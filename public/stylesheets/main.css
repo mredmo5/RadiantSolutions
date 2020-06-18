@@ -1,0 +1,66 @@
+body {
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.jumbotron {
+    color: white;
+    background: grey;
+}
+
+.thumbnail {
+    padding: 0;
+    background: grey;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: white;
+}
+
+.thumbnail h4 {
+    color: white;
+}
+
+.lead {
+    color: white;
+}
+
+.login {
+    color: white;
+}
+
+.newcar {
+    color: white;
+}
+
+.price{
+    float: right;
+    text-decoration: line-through;
+}
+.sellprice{
+    float: right;
+    color: greenyellow;
+}
+
+.title{
+    color: white;
+}
+
+#deleteform {
+    display: inline;
+}
+
+footer {
+    color: gold;
+}

@@ -1,0 +1,63 @@
+<%- include("../partials/header") %>
+    <div class="container ">
+        <h1 class="text-center newcar">Create a Vehicle</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/vehicles" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[year]" placeholder="year">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[make]" placeholder="make">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[model]" placeholder="model">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[engine]" placeholder="engine">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[price]" placeholder="Markdown price">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[sellprice]" placeholder="ACTUAL price">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[vin]" placeholder="vin">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[miles]" placeholder="miles">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[color]" placeholder="color">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="vehicle[description]" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="vehicle[image]" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image2" name="vehicle[image2]" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image3" name="vehicle[image3]" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image4" name="vehicle[image4]" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image5" name="vehicle[image5]" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form> 
+            <a href="/vehicles">Go Back</a>
+        </div>
+    </div>
+    <%- include("../partials/footer") %>

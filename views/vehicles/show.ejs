@@ -1,0 +1,54 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <strong><h3 class=" pb-2 title text-center"><%= vehicle.year %>  <%= vehicle.make %>  <%= vehicle.model %> </h3></strong>
+    <div class="row">
+        
+        <div class="col-md-8">
+            <div class="thumbnail">
+                <img class="img-responsive" src= "<%= vehicle.image %>">
+                <div class="caption-full">
+                   
+                    <h5 class="price">$ <%= vehicle.price %></h5>
+                    <h4 class=""><a> <%= vehicle.year + " " + vehicle.make + " " + vehicle.model %> </a></h4>
+                    <h5 class="sellprice">$ <%= vehicle.sellprice %></h5>
+
+                    <p> <%= vehicle.description %></p>
+                    <p>
+                       <!-- <em>Submitted By  </em>   -->
+                    </p>
+                    <% if(currentUser){ %>
+                    <a class="btn btn-warning" href="/vehicles/<%=vehicle._id%>/edit">Edit Vehicle</a>
+                    <form id="deleteform" action="/vehicles/<%=vehicle._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger"> Delete Vehicle</button>
+                    </form>
+                    <% } %> 
+                </div>
+               
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="list-group">
+                <li class="list-group-item">Vin: <%= vehicle.vin %> </li>
+                <li class="list-group-item">Miles: <%= vehicle.miles %></li>
+                <li class="list-group-item">Engine: <%= vehicle.engine %></li>
+                <li class="list-group-item">Color: <%= vehicle.color %></li>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

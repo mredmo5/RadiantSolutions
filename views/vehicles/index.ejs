@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container text-center">
+            
+            <img width="100%" height="350" class="" src="https://s3.amazonaws.com/radiantautonc.com/Vehicles/logo1.png"> 
+            <h4>Welcome!</h4>
+            <p>View our hand-picked Vehicles!</p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    
+        <% vehicles.forEach(function(vehicle){ %>
+            <div class="col-md-4 col-s-6">
+                <div class="thumbnail">
+                    <img src="<%= vehicle.image %> "> 
+                    <div class="caption">
+                         <h4> <%= vehicle.year %>  <%= vehicle.make %>  <%= vehicle.model %> </h4> 
+                    </div>
+                    <p>
+                        <a href="/vehicles/<%= vehicle._id %>" class="btn btn-primary mb-2">More Info</a>
+                    </p>
+                    
+                </div>
+            </div>
+            
+        <% }); %>
+    
+    </div>
+    <% if(currentUser){ %>
+    <a href="/vehicles/new">Add a New vehicle!!</a>
+    <% } %>
+</div>
+
+
+<div class="container">
+    <h3 class="text-white text-center pt-3 pb-3">Stop in For a Visit!!</h3>
+    <!--The div element for the map -->
+    <div class="m-auto container w-75 text-center">
+      <iframe
+      width="100%"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB7pqjdvahNpPu1BMNIDl-OJpqHdE5uMU4
+        &q=Radiant+Auto+LLP" allowfullscreen>
+    </iframe>
+  
+  </div>
+  
+  </div>
+
+
+
+
+
+<%- include("../partials/footer") %>
